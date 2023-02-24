@@ -1,6 +1,5 @@
-use_bpm 121
-
-live_loop :mOne do
+#definitions
+define :mOne do
   use_synth :saw
   play :f5
   sleep 0.5
@@ -22,4 +21,116 @@ live_loop :mOne do
   sleep 0.5
   play :g5
   sleep 0.5
+  play :gs5
+  sleep 0.5
+  play :a5
+  sleep 0.5
+  play :b5
+  sleep 0.5
+  play :c6
+  sleep 1
+  play :d6
+  sleep 0.5
+  play :e6
+  sleep 0.5
+  play :f6
+  sleep 0.5
+  play :d6
+  sleep 0.5
+  play :b5
+  sleep 0.5
+  play :c6
+  sleep 0.5
+  play :d6
+  sleep 0.5
+  play :b5
+  sleep 0.5
+  play :c6
+  sleep 0.5
+  play :b5
+  sleep 0.5
+  play :c6
+  sleep 0.5
+  play :d6
+  sleep 0.5
+  play :e6
+  sleep 1
+end
+
+define :mTwo do
+  use_synth :saw
+  play :f5
+  sleep 0.5
+  play :g5
+  sleep 0.5
+  play :a5
+  sleep 0.5
+  play :as5
+  sleep 0.5
+  play :b5
+  sleep 0.5
+  play :c6
+  sleep 0.5
+  play :d6
+  sleep 1
+  play :e5
+  sleep 0.5
+  play :f5
+  sleep 0.5
+  play :g5
+  sleep 0.5
+  play :gs5
+  sleep 0.5
+  play :a5
+  sleep 0.5
+  play :b5
+  sleep 0.5
+  play :c6
+  sleep 1
+  play :d6
+  sleep 0.5
+  play :e6
+  sleep 0.5
+  play :f6
+  sleep 0.5
+  play :d6
+  sleep 0.5
+  play :b5
+  sleep 0.5
+  play :c6
+  sleep 0.5
+  play :d6
+  sleep 0.5
+  play :b5
+  sleep 0.5
+  play :c6
+  sleep 0.5
+  play :b5
+  sleep 0.5
+  play :c6
+  sleep 0.5
+  play :d6
+  sleep 0.5
+  play :e6
+  sleep 0.5
+  play :d6
+  sleep 0.5
+  play :c6
+  sleep 0.5
+  play :a5
+  sleep 0.5
+end
+
+
+
+use_bpm 121
+#Start
+mOne
+
+#part 2
+
+use_bpm 176
+live_loop :ChorusO do
+  mTwo
+  mOne
 end
