@@ -1,136 +1,190 @@
 #definitions
-define :mOne do
-  use_synth :saw
-  play :f5
-  sleep 0.5
-  play :g5
-  sleep 0.5
-  play :a5
-  sleep 0.5
-  play :as5
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 1
-  play :e5
-  sleep 0.5
-  play :f5
-  sleep 0.5
-  play :g5
-  sleep 0.5
-  play :gs5
-  sleep 0.5
-  play :a5
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 1
-  play :d6
-  sleep 0.5
-  play :e6
-  sleep 0.5
-  play :f6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :e6
-  sleep 1
-end
-
-define :mTwo do
-  use_synth :saw
-  play :f5
-  sleep 0.5
-  play :g5
-  sleep 0.5
-  play :a5
-  sleep 0.5
-  play :as5
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 1
-  play :e5
-  sleep 0.5
-  play :f5
-  sleep 0.5
-  play :g5
-  sleep 0.5
-  play :gs5
-  sleep 0.5
-  play :a5
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 1
-  play :d6
-  sleep 0.5
-  play :e6
-  sleep 0.5
-  play :f6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :e6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :a5
-  sleep 0.5
-end
-
-
-
-use_bpm 121
-#Start
-mOne
-
-#part 2
-
-use_bpm 176
-live_loop :ChorusO do
-  mTwo
+define :guitarOne do
+  end
+  
+  define :mOne do
+    use_synth :saw
+    play :f5
+    sleep 0.5
+    play :g5
+    sleep 0.5
+    play :a5
+    sleep 0.5
+    play :as5
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :d6
+    sleep 1
+    play :e5
+    sleep 0.5
+    play :f5
+    sleep 0.5
+    play :g5
+    sleep 0.5
+    play :gs5
+    sleep 0.5
+    play :a5
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 1
+    play :d6
+    sleep 0.5
+    play :e6
+    sleep 0.5
+    play :f6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :e6
+    sleep 1
+  end
+  
+  define :mTwo do
+    use_synth :saw
+    play :f5
+    sleep 0.5
+    play :g5
+    sleep 0.5
+    play :a5
+    sleep 0.5
+    play :as5
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :d6
+    sleep 1
+    play :e5
+    sleep 0.5
+    play :f5
+    sleep 0.5
+    play :g5
+    sleep 0.5
+    play :gs5
+    sleep 0.5
+    play :a5
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 1
+    play :d6
+    sleep 0.5
+    play :e6
+    sleep 0.5
+    play :f6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :e6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :a5
+    sleep 0.5
+  end
+  
+  define :bass do
+    use_synth :bass_foundation
+    play :d3
+    sleep 1.5
+    play :g2
+    sleep 2.5
+    play :c3
+    sleep 1.5
+    play :f2
+    sleep 1.5
+    play :a2
+    sleep 1
+    play :b2
+    sleep 1.5
+    play :d3
+    sleep 0.5
+    play :e3
+    sleep 1
+    play :b2
+    sleep 1
+    play :a2
+    sleep 1.5
+    play :a3
+    sleep 2.5
+    play :d3
+    sleep 1.5
+    play :g2
+    sleep 2.5
+    play :c3
+    sleep 1.5
+    play :f2
+    sleep 1.5
+    play :a2
+    sleep 1
+    play :b2
+    sleep 1.5
+    play :d3
+    sleep 0.5
+    play :e3
+    sleep 1
+    play :b2
+    sleep 1
+    play :a2
+    sleep 1
+    play :e3
+    sleep 1
+    play :a2
+    sleep 1
+  end
+  
+  
+  use_bpm 121
+  #Start
   mOne
-end
+  #part 2
+  
+  use_bpm 176
+  live_loop :ChorusO do
+    mTwo
+    mOne
+  end
+  live_loop :bass do
+    bass
+  end
