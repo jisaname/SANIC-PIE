@@ -1,0 +1,19 @@
+num = 21 #start at 1!
+spe = 0.5
+
+use_synth :saw
+3.times do
+  88.times do
+    play (num)
+    sleep (spe)
+    num = num + 1 #num = 1 + 1
+    
+  end
+  
+  88.times do
+    play (num)
+    sleep spe
+    num = num - 1 #num = 1 + 1
+  end
+  spe = spe / 2
+end
