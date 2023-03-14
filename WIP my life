@@ -81,62 +81,20 @@ define :gOne do
   sleep 1
 end
 
+m = [:f5, :g5, :a5, :as5, :b5, :c6, :d6, :e5,:f5,:g5,:gs5,:a5,:b5,:c6,:d6,:e6,:f6,:d6,:b5,:c6,:d6,:b5,:c6,:b5,:c6,:d6,:e6]
+a = [0.01,0.02,0.03,0.04,0.05,0.05,0.06,0.07,0.08,0.09,0.1,0.2,0.3,0.4,0.4,0.6,0.7,0.8,0.9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+t = [0.5,0.5,0.5,0.5,0.5,0.5,1,0.5,0.5,0.5,0.5,0.5,0.5,1,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,1]
+i = 0
+
 define :intro do
+  use_bpm 121
   use_synth :chiplead
-  play :f5, amp: 0.01
-  sleep 0.5
-  play :g5, amp: 0.02
-  sleep 0.5
-  play :a5, amp: 0.03
-  sleep 0.5
-  play :as5, amp: 0.04
-  sleep 0.5
-  play :b5, amp: 0.05
-  sleep 0.5
-  play :c6, amp: 0.06
-  sleep 0.5
-  play :d6, amp: 0.07
-  sleep 1
-  play :e5, amp: 0.08
-  sleep 0.5
-  play :f5, amp: 0.09
-  sleep 0.5
-  play :g5, amp: 0.1
-  sleep 0.5
-  play :gs5, amp: 0.2
-  sleep 0.5
-  play :a5, amp: 0.2
-  sleep 0.5
-  play :b5, amp: 0.3
-  sleep 0.5
-  play :c6, amp: 0.4
-  sleep 1
-  play :d6, amp: 0.5
-  sleep 0.5
-  play :e6, amp: 0.6
-  sleep 0.5
-  play :f6, amp: 0.7
-  sleep 0.5
-  play :d6, amp: 0.8
-  sleep 0.5
-  play :b5, amp: 0.9
-  sleep 0.5
-  play :c6, amp: 1
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :e6
-  sleep 1
+  27.times do
+    play m[i], amp: a[i]
+    sleep t[i]
+    i = i+1
+  end
+  
 end
 
 define :mOne do
@@ -386,4 +344,3 @@ live_loop :guitar do
 end
 wait 30
 bassE
-
