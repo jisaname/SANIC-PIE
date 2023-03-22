@@ -1,0 +1,78 @@
+use_bpm 150
+use_synth :chiplead
+
+define :m do |n1,n2|
+  play n1
+  play n2
+  sleep 0.5
+end
+live_loop :theme do
+  # MEASURE 1 ---------------------------
+  2.times do
+    m :a4, :a5
+  end
+  m :c5,:c6
+  m :a4,:a5
+  m :d5,:d6
+  m :a4,:a5
+  m :e5,:e6
+  m :d5,:d6
+  # MEASURE 2 ---------------------------
+  2.times do
+    m :c5,:c6
+  end
+  m :e5,:e6
+  m :c5,:c6
+  m :g5,:g6
+  m :c4,:c5
+  m :e5,:e6
+  m :c4,:c5
+  # MEASURE 3 ---------------------------
+  2.times do
+    m :g4,:g5
+  end
+  m :b4,:b5
+  m :g4,:g5
+  m :c5,:c6
+  m :g4,:g5
+  m :d5,:d6
+  m :c5,:c6
+  # MEASURE 4 ---------------------------
+  2.times do
+    m :f4,:f5
+  end
+  m :a4,:a5
+  m :f4,:f5
+  m :c5,:c6
+  m :f4,:f5
+  m :c5,:c6
+  m :b4,:b5
+end
+
+live_loop :drumo do
+  4.times do
+    6.times do
+      sample :drum_bass_hard
+      sleep 0.5
+    end
+    2.times do
+      sample :drum_bass_hard
+      sample :drum_snare_hard
+      sleep 0.5
+    end
+  end
+end
+wait 4
+live_loop :drumt do
+  4.times do
+    sample :drum_snare_hard
+    sleep 0.25
+    sample :drum_snare_hard
+    sleep 0.25
+    sample :drum_snare_hard
+    sleep 0.25
+    sample :drum_snare_hard
+    sleep 0.25
+    wait 3
+  end
+end
