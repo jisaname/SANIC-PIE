@@ -1,0 +1,41 @@
+#main riff
+use_bpm 126
+use_synth :bass_foundation
+define :Ro do |n1,n2,n3|
+  with_fx :bitcrusher do
+    play n1
+    sleep 0.5
+    play n2
+    sleep 1
+    play n3
+    sleep 0.5
+  end
+end
+define :two do
+  with_fx :bitcrusher do
+    play :f3
+    sleep 0.5
+    play :f3
+    sleep 1
+    play :ef3
+    sleep 0.5
+    play :f3
+    sleep 0.5
+    play :a3
+    sleep 0.5
+    play :c3
+    sleep 0.5
+    play :c3
+    sleep 0.5
+  end
+end
+
+#intro
+2.times do
+  Ro :f3,:f3,:ef3
+end
+two
+2.times do
+  Ro :d3,:d3,:c3
+end
+Ro 
