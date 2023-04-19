@@ -9,6 +9,7 @@ slide = [43, 42, 41, 40, 39]
 leep = 0.5
 i = 0
 define :vocals do
+  use_bpm 126
   use_synth :chiplead
   with_fx :bitcrusher do
     play :r
@@ -311,13 +312,13 @@ live_loop :pO do
   Ro :bf2,:bf2,:r
   stop
 end
-wait 32
+
 live_loop :vocs do
   vocals
   stop
 end
 #breakdown
-wait 32
+wait 64
 brok
 broke
 brok
@@ -362,3 +363,5 @@ live_loop :p2 do
 end
 wait 60
 sample fade, amp: 2
+
+
