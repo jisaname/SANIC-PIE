@@ -1,84 +1,103 @@
 #definitions
+use_synth :chiplead
+define :p1 do |n1,n2,n3,n4,n5,n6,n7|
+  play n1
+  sleep 0.5
+  play n2
+  sleep 0.5
+  play n3
+  sleep 0.5
+  play n4
+  sleep 0.5
+  play n5
+  sleep 0.5
+  play n6
+  sleep 0.5
+  play n7
+  sleep 1
+end
 define :gOne do
-  use_synth :piano
-  play :e6
-  sleep 2
-  play :e6
-  sleep 0.5
-  play :d5
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :d5
-  sleep 0.5
-  play :c6
-  sleep 1
-  play :a5
-  sleep 1
-  play :f5
-  sleep 0.5
-  play :a5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :e6
-  sleep 0.5
-  play :f6
-  sleep 0.5
-  play :e6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :b5
-  sleep 1
-  play :d6
-  sleep 1
-  play :c6
-  sleep 2.5
-  play :a5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :e6
-  sleep 2
-  play :e6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :c6
-  sleep 1
-  play :a5
-  sleep 1
-  play :f5
-  sleep 0.5
-  play :a5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :e6
-  sleep 0.5
-  play :f6
-  sleep 0.5
-  play :e6
-  sleep 0.5
-  play :d6
-  sleep 0.5
-  play :c6
-  sleep 1
-  play :b5
-  sleep 1
-  play :a5
-  sleep 1
+  with_fx :flanger do
+    use_synth :piano
+    play :e6
+    sleep 2
+    play :e6
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :c6
+    sleep 1
+    play :a5
+    sleep 1
+    play :f5
+    sleep 0.5
+    play :a5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :e6
+    sleep 0.5
+    play :f6
+    sleep 0.5
+    play :e6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :b5
+    sleep 1
+    play :d6
+    sleep 1
+    play :c6
+    sleep 2.5
+    play :a5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :e6
+    sleep 2
+    play :e6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :b5
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :c6
+    sleep 1
+    play :a5
+    sleep 1
+    play :f5
+    sleep 0.5
+    play :a5
+    sleep 0.5
+    play :c6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :e6
+    sleep 0.5
+    play :f6
+    sleep 0.5
+    play :e6
+    sleep 0.5
+    play :d6
+    sleep 0.5
+    play :c6
+    sleep 1
+    play :b5
+    sleep 1
+    play :a5
+    sleep 1
+  end
 end
 
 m = [:f5, :g5, :a5, :as5, :b5, :c6, :d6, :e5,:f5,:g5,:gs5,:a5,:b5,:c6,:d6,:e6,:f6,:d6,:b5,:c6,:d6,:b5,:c6,:b5,:c6,:d6,:e6]
@@ -99,34 +118,6 @@ end
 
 define :mOne do
   use_synth :chiplead
-  play :f5
-  sleep 0.5
-  play :g5
-  sleep 0.5
-  play :a5
-  sleep 0.5
-  play :as5
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 0.5
-  play :d6
-  sleep 1
-  play :e5
-  sleep 0.5
-  play :f5
-  sleep 0.5
-  play :g5
-  sleep 0.5
-  play :gs5
-  sleep 0.5
-  play :a5
-  sleep 0.5
-  play :b5
-  sleep 0.5
-  play :c6
-  sleep 1
   play :d6
   sleep 0.5
   play :e6
@@ -327,6 +318,8 @@ use_bpm 176
 live_loop :mO do
   2.times do
     mTwo
+    p1 :f5,:g5,:a5,:as5,:b5,:c6,:d6
+    p1 :e5,:f5,:g5,:gs5,:a5,:b5,:c6
     mOne
   end
   stop
