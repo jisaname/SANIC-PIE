@@ -1,7 +1,192 @@
 #main riff
 use_bpm 126
 Dloop = "C:/Users/Jacob_sandoval/Documents/Audacity/better_sample.wav"
+fade = "C:/Users/Jacob_sandoval/Desktop/fade out.wav"
 
+
+use_bpm 126
+slide = [43, 42, 41, 40, 39]
+leep = 0.5
+i = 0
+define :vocals do
+  use_synth :chiplead
+  with_fx :bitcrusher do
+    play :r
+    sleep 0.5
+    play :bf4
+    sleep 0.5
+    play :bf4
+    sleep 0.5
+    play :g4
+    sleep 0.5
+    3.times do
+      play :bf4
+      sleep 0.5
+    end
+    play :g4
+    sleep 0.5
+    play :bf4
+    sleep 0.5
+    play :g4
+    sleep 3
+    2.times do
+      play :bf4
+      sleep 0.5
+    end
+    sleep 0.5
+    3.times do
+      play :bf4
+      sleep 0.5
+    end
+    play :g4
+    sleep 0.5
+    2.times do
+      play :c5
+      sleep 0.5
+    end
+    play :c5
+    sleep 1
+    play :bf4
+    sleep 2.5
+    2.times do
+      play :c5
+      sleep 0.5
+    end
+    play :bf4
+    sleep 0.5
+    play :c5
+    sleep 0.5
+    play :bf4
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :c5
+    sleep 0.5
+    play :bf4
+    sleep 3.5
+    2.times do
+      play :bf4
+      sleep 0.5
+    end
+    sleep 0.5
+    3.times do
+      play :bf4
+      sleep 0.5
+    end
+    play :g4
+    sleep 0.5
+    3.times do
+      play :bf4
+      sleep 0.5
+    end
+    sleep 0.5
+    play :bf4
+    sleep 1
+    play :g4
+    sleep 0.5
+    play :bf4
+    sleep 0.5
+    2.times do
+      play :bf4
+      sleep 0.5
+    end
+    play :g4
+    sleep 1
+    2.times do
+      play :bf4
+      sleep 0.5
+    end
+    play :g4
+    sleep 0.5
+    play :bf4
+    sleep 0.5
+    play :c5
+    sleep 0.5
+    play :bf4
+    sleep 3
+    5.times do
+      play :bf4
+      sleep 0.5
+    end
+    sleep 0.5
+    play :bf4
+    sleep 1
+    3.times do
+      play :bf4
+      sleep 0.5
+    end
+    play :bf4
+    sleep 1
+    play :g4
+    sleep 2
+    play :bf4
+    sleep 1
+    play :bf4
+    sleep 0.5
+    play :bf4
+    sleep 1
+    play :bf4
+    sleep 0.5
+    play :bf4
+    sleep 0.5
+    play :g4
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :c5
+    sleep 1
+    play :bf4
+    sleep 0.5
+    2.times do
+      play :bf4
+      sleep 0.75
+    end
+    2.times do
+      play :bf4
+      sleep 0.5
+    end
+    2.times do
+      play :bf4
+      sleep 0.75
+    end
+    2.times do
+      play :bf4
+      sleep 0.5
+    end
+    2.times do
+      play :bf4
+      sleep 0.75
+    end
+    2.times do
+      play :bf4
+      sleep 0.5
+    end
+  end
+end
+
+define :broken do
+  with_fx :bitcrusher do
+    play :bf2
+    sleep 1
+    play :bf2
+    sleep 0.5
+    play :af2
+    sleep 0.5
+    play :af2
+    sleep 0.5
+    play :af2
+    sleep 0.5
+    play :af2
+    sleep 0.5
+    5.times do
+      play(slide[i])
+      i = i + 1
+      sleep 0.25/5
+    end
+    sleep 0.25
+    play :d2
+  end
+end
 
 use_synth :chipbass
 define :Ro do |n1,n2,n3|
@@ -126,8 +311,54 @@ live_loop :pO do
   Ro :bf2,:bf2,:r
   stop
 end
+wait 32
+live_loop :vocs do
+  vocals
+  stop
+end
 #breakdown
-wait 64
+wait 32
 brok
 broke
 brok
+broken
+live_loop :p2 do
+  2.times do
+    Ro :f3,:f3,:ef3
+  end
+  two
+  2.times do
+    Ro :d3,:d3,:c3
+  end
+  Ro :bf2,:bf2,:bf2
+  Ro :ff3,:ff3,:ff3
+  2.times do
+    Ro :f3,:f3,:ef3
+  end
+  two
+  2.times do
+    Ro :d3,:d3,:c3
+  end
+  Ro :bf2,:bf2,:bf2
+  fill
+  2.times do
+    Ro :f3,:f3,:ef3
+  end
+  two
+  2.times do
+    Ro :d3,:d3,:c3
+  end
+  Ro :bf2,:bf2,:bf2
+  Ro :ff3,:ff3,:ff3
+  2.times do
+    Ro :f3,:f3,:ef3
+  end
+  two
+  2.times do
+    Ro :d3,:d3,:c3
+  end
+  Ro :bf2,:bf2,:r
+  stop
+end
+wait 60
+sample fade, amp: 2
