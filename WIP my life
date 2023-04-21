@@ -116,6 +116,10 @@ define :intro do
   
 end
 
+theme = "C:/Users/jcsan/Downloads/AOL (Sign On - Dial Up).wav"
+
+
+
 define :mOne do
   use_synth :chiplead
   play :d6
@@ -312,6 +316,8 @@ end
 
 use_bpm 121
 #Start
+sample theme
+wait 35
 intro
 #part 2
 use_bpm 176
