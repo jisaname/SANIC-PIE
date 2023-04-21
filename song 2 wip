@@ -1,8 +1,9 @@
 #main riff
 use_bpm 126
-Dloop = "C:/Users/Jacob_sandoval/Documents/Audacity/better_sample.wav"
-fade = "C:/Users/Jacob_sandoval/Desktop/fade out.wav"
-
+Dloop = "C:/Users/jcsan/Downloads/better_sample.wav"
+fade = "C:/Users/jcsan/Downloads/fade out.wav"
+trans = "C:/Users/jcsan/Downloads/find song.wav"
+finals = "C:/Users/jcsan/Downloads/Computer Crash - Free Sound Effect.wav"
 
 use_bpm 126
 slide = [43, 42, 41, 40, 39]
@@ -272,7 +273,9 @@ define :broke do
 end
 
 #intro
-sample Dloop,amp: 4
+sample trans
+wait 30
+sample Dloop, start: 0, finish: 0.95, amp: 4
 wait 2
 live_loop :pO do
   2.times do
@@ -362,4 +365,15 @@ live_loop :p2 do
   stop
 end
 wait 60
-sample fade, amp: 2
+sample fade
+
+s = [0.95,0.96,0.97,0.98,0.99,1]
+a = [4,3,2,1,0,0]
+e = [0.96,0.97,0.98,0.99,1,1]
+i = 0
+6.times do
+  sample Dloop,start: s[i], finish: e[i], amp: a[i]
+  sleep 1.5
+  i = i+1
+end
+sample finals
